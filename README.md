@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![./assets/images/Screenshot 2026-03-12 012514.png]
+![Solution Screenshot](./assets/images/Screenshot 2026-03-12 012514.png)
 
 ## My process
 
@@ -43,7 +43,9 @@ Users should be able to:
 I learned a lot about Javascript and how to use it to manipulate the DOM effectively. It showed me that thinking through a problem step by step can help debug and also help see what is going on in the code. The css part also helped me figure out better ways to implement animations when certain properties can't be animated.
 
 ```js
-// I think this was my favorite piece of code as I was able to problem solve this by trial and error and the outcome was very satisfying!
+// I think this was my favorite piece of code as
+// I was able to problem solve this by trial and
+// error and the outcome was very satisfying!
 document.addEventListener("click", (e) => {
   if (e.target.matches(".answer-icon")) {
     const answer = e.target.parentElement.nextElementSibling;
