@@ -10,6 +10,10 @@
   src: url("./assets/fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
 }
 
+html {
+  scrollbar-width: none;
+}
+
 body {
   background-color: var(--Purple100);
   font-family: WorkSans;
@@ -17,7 +21,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 90vh;
+  margin: 0;
 }
 
 #background-image {
@@ -30,12 +35,13 @@ body {
 }
 
 .container {
-  width: 500px;
+  width: clamp(300px, 50%, 600px);
   margin: 0 auto;
   height: fit-content;
   background-color: var(--White);
   border-radius: 10px;
-  padding: 2em;
+  padding: 1.5em;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .heading {
@@ -44,15 +50,62 @@ body {
   gap: 20px;
 }
 
+h1 {
+  font-size: 3em;
+}
+
 .question-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1em;
+}
+
+.question-container:hover .question {
+  color: hsl(274, 57%, 53%);
+}
+
+.question {
+  font-weight: bold;
+}
+
+.answer-icon:hover {
+  cursor: pointer;
 }
 
 .question-answer {
-  margin-top: 0.5em;
+  margin: 0;
   color: var(--Purple600);
-  display: none;
+  font-weight: 500;
+  transition:
+    opacity 0.5s ease-out,
+    max-height 0.5s ease-out;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.open {
+  opacity: 1;
+  max-height: 200px;
+  transition:
+    max-height 0.5s ease-in,
+    opacity 0.5s ease-in;
+}
+
+@media (width < 376px) {
+  body {
+    font-size: 16px;
+    height: 100vh;
+  }
+  .container {
+    width: 80%;
+  }
+  #background-image {
+    object-fit: cover;
+    object-position: top;
+    height: 25vh;
+  }
+  .open {
+    max-height: 150px;
+  }
 }
