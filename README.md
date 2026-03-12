@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Solution Screenshot](./assets/images/Screenshot 2026-03-12 012514.png)
+![Solution Screenshot](./assets/images/Screenshot%202026-03-12%20012514.png)
 
 ## My process
 
